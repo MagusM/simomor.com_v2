@@ -70,9 +70,13 @@ const heroOrbitDotMap: HeroOrbitMapProps[] = [
 	}
 ];
 
+// todo: continue => 1:17:47
 export const HeroSection = () => {
 	return (
-		<div className="relative z-0 overflow-x-clip py-32 md:py-48 lg:py-60">
+		<div
+			id="home"
+			className="relative z-0 overflow-x-clip py-32 md:py-48 lg:py-60"
+		>
 			<div
 				className="absolute inset-0"
 				style={{
@@ -88,12 +92,10 @@ export const HeroSection = () => {
 						backgroundImage: `url(${grainImage.src})`
 					}}
 				></div>
-				{[620, 820, 1020, 1220].map((width) => (
-					<div
-						key={width}
-						className={clsx(["hero-ring", `size-[${width}px]`])}
-					></div>
-				))}
+				<div className="hero-ring size-620"></div>
+				<div className="hero-ring size-820"></div>
+				<div className="hero-ring size-1020"></div>
+				<div className="hero-ring size-1220"></div>
 
 				{heroOrbitStarMap.map(({ size, child, rotation }) => (
 					<HeroOrbit

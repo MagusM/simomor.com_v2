@@ -1,5 +1,4 @@
 import { capitalize } from "lodash";
-import { twMerge } from "tailwind-merge";
 import clsx from "clsx";
 
 const routesSet = new Set<string>(["home", "projects", "about", "contact"]);

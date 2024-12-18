@@ -21,6 +21,12 @@ const config: Config = {
 			}
 		},
 		extend: {
+			spacing: {
+				"620": "620px",
+				"820": "820px",
+				"1020": "1020px",
+				"1220": "1220px"
+			},
 			fontFamily: {
 				sans: "var(--font-sans)",
 				serif: "var(--font-serif)"
