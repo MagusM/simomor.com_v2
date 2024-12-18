@@ -70,7 +70,6 @@ const heroOrbitDotMap: HeroOrbitMapProps[] = [
 	}
 ];
 
-// todo: continue => 1:17:47
 export const HeroSection = () => {
 	return (
 		<div
