@@ -7,10 +7,10 @@ import { TestimonialsSection } from "@/sections/Testimonials";
 export default function Home() {
 	return (
 		<div>
-			{/*<Header />*/}
-			{/*<HeroSection />*/}
-			{/*<ProjectsSection />*/}
-			{/*<TapeSection />*/}
+			<Header />
+			<HeroSection />
+			<ProjectsSection />
+			<TapeSection />
 			<TestimonialsSection />
 		</div>
 	);
