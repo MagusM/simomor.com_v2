@@ -1,5 +1,4 @@
 import React, { PropsWithChildren } from "react";
-import StarIcon from "@/assets/icons/star.svg";
 
 export type HeroOrbitProps = PropsWithChildren<{
 	size: number;
