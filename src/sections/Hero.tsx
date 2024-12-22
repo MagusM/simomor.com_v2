@@ -5,7 +5,6 @@ import grainImage from "@/assets/images/grain.jpg";
 import StarIcon from "@/assets/icons/star.svg";
 import { HeroOrbit, HeroOrbitProps } from "@/components/HeroOrbit";
 import SparkleIcon from "@/assets/icons/sparkle.svg";
-import clsx from "clsx";
 
 type HeroOrbitMapProps = {
 	child: React.ReactNode;
@@ -135,7 +134,9 @@ export const HeroSection = () => {
 						className="size-[100px]"
 					/>
 					<div className="inline-flex items-center gap-4 rounded-lg border border-gray-800 bg-gray-950 px-4 py-1.5">
-						<div className="size-2.5 rounded-full bg-green-500"></div>
+						<div className="relative size-2.5 rounded-full bg-green-500">
+							<div className="animate-ping-large absolute inset-0 rounded-full bg-green-500" />
+						</div>
 						<div className="text-sm font-medium">
 							Available for new projects
 						</div>
