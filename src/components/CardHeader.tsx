@@ -20,7 +20,9 @@ export const CardHeader: React.FC<CardHeaderProps> = ({
 				<StarIcon className="size-9 text-emerald-300" />
 				<h3 className="font-serif text-3xl">{startCase(title)}</h3>
 			</div>
-			<p className="mt-2 text-sm text-white/60">{capitalize(description)}</p>
+			<p className="mt-2 max-w-xs text-sm text-white/60 lg:text-base">
+				{capitalize(description)}
+			</p>
 		</div>
 	);
 };
