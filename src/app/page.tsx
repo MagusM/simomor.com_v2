@@ -14,8 +14,8 @@ export default function Home() {
 			{/*<ProjectsSection />*/}
 			{/*<TapeSection />*/}
 			{/*<TestimonialsSection />*/}
-			<AboutSection />
-			{/*	todo: continue from: 2:46:32*/}
+			{/*<AboutSection />*/}
+			<ContactSection />
 		</div>
 	);
 }
