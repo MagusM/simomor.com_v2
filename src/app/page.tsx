@@ -9,12 +9,12 @@ import { AboutSection } from "@/sections/About";
 export default function Home() {
 	return (
 		<div>
-			{/*<Header />*/}
-			{/*<HeroSection />*/}
-			{/*<ProjectsSection />*/}
-			{/*<TapeSection />*/}
-			{/*<TestimonialsSection />*/}
-			{/*<AboutSection />*/}
+			<Header />
+			<HeroSection />
+			<ProjectsSection />
+			<TapeSection />
+			<TestimonialsSection />
+			<AboutSection />
 			<ContactSection />
 		</div>
 	);
