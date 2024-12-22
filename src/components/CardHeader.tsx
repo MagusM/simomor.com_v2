@@ -15,7 +15,7 @@ export const CardHeader: React.FC<CardHeaderProps> = ({
 	className
 }: CardHeaderProps) => {
 	return (
-		<div className={twMerge("flex flex-col", className)}>
+		<div className={twMerge("flex flex-col p-6 md:px-10 md:py-8", className)}>
 			<div className="inline-flex items-center gap-2">
 				<StarIcon className="size-9 text-emerald-300" />
 				<h3 className="font-serif text-3xl">{startCase(title)}</h3>
