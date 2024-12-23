@@ -1,3 +1,5 @@
+"use client";
+
 import dayjs from "dayjs";
 import Image, { StaticImageData } from "next/image";
 import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
@@ -7,6 +9,8 @@ import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
+import { isMobile } from "@/utils/deviceBreakpoints.util";
+import { useEffect, useState } from "react";
 
 type PortfolioProject = {
 	company: string;
@@ -57,6 +61,22 @@ const portfolioProjects: PortfolioProject[] = [
 ];
 
 export const ProjectsSection = () => {
+	const [topValue, setTopValue] = useState(0);
+
+	useEffect(() => {
+		const calculateTop = () => {
+			const isMobileView = isMobile();
+			return isMobileView ? 100 : 200;
+		};
+
+		setTopValue(calculateTop());
+
+		const handleResize = () => setTopValue(calculateTop());
+		window.addEventListener("resize", handleResize);
+
+		return () => window.removeEventListener("resize", handleResize);
+	}, []);
+
 	return (
 		<section id="projects" className="pb-16 lg:py-24">
 			<div className="container">
@@ -68,10 +88,13 @@ export const ProjectsSection = () => {
 					}
 				/>
 				<div className="mt-10 flex flex-col gap-20 md:mt-20">
-					{portfolioProjects.map((project) => (
+					{portfolioProjects.map((project, index) => (
 						<Card
 							key={project.title}
-							className="px-8 pb-0 pt-8 md:px-10 md:pt-12 lg:px-20 lg:pt-16"
+							className="sticky px-8 pb-0 pt-8 md:px-10 md:pt-12 lg:px-20 lg:pt-16"
+							style={{
+								top: `calc(64px + ${index * topValue}px)`
+							}}
 						>
 							<div className="lg:grid lg:grid-cols-2 lg:gap-16">
 								<div className="lg:pb-16">
