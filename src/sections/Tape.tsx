@@ -1,4 +1,5 @@
 import StarIcon from "@/assets/icons/star.svg";
+import { Fragment } from "react";
 
 const words = [
 	"Performant",
@@ -26,15 +27,24 @@ export const TapeSection = () => {
 							"linear-gradient(to right, transparent, black 10%, black 90%, transparent)"
 					}}
 				>
-					<div className="flex flex-none gap-4 py-3">
-						{words.map((word, i) => (
-							<div key={i + word} className="inline-flex items-center gap-4">
-								<span className="text-sm font-extrabold uppercase text-gray-900">
-									{word}
-								</span>
-								<StarIcon className="size-6 -rotate-12 text-gray-900" />
-							</div>
-						))}
+					<div className="animate-move-left flex flex-none gap-4 py-3 pr-4 [animation-duration:30s]">
+						{[
+							...new Array(2).fill(0).map((_, idx) => (
+								<Fragment key={idx}>
+									{words.map((word, i) => (
+										<div
+											key={i + word}
+											className="inline-flex items-center gap-4"
+										>
+											<span className="text-sm font-extrabold uppercase text-gray-900">
+												{word}
+											</span>
+											<StarIcon className="size-6 -rotate-12 text-gray-900" />
+										</div>
+									))}
+								</Fragment>
+							))
+						]}
 					</div>
 				</div>
 			</div>
