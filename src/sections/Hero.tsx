@@ -115,7 +115,7 @@ export const HeroSection = () => {
 	return (
 		<div
 			id="home"
-			className="relative z-0 overflow-x-clip py-32 md:py-48 lg:py-60"
+			className="relative z-0 flex min-h-[100dvh] items-center justify-center overflow-x-clip"
 		>
 			<div
 				className="absolute inset-0"
@@ -210,7 +210,7 @@ export const HeroSection = () => {
 				)}
 			</div>
 
-			<div className="container">
+			<div className="container md:-mt-20 lg:-mt-20">
 				<div className="flex flex-col items-center">
 					<Image
 						src={memojiImage}

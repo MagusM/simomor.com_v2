@@ -13,7 +13,7 @@ import { MapImage } from "@/sections/sectionComponents/about/MapImage";
 
 export const AboutSection = () => {
 	return (
-		<div className="py-20 lg:py-28">
+		<div className="py-20 lg:py-28" id="about">
 			<div className="container">
 				<SectionHeader
 					eyeBrow={"about me"}
