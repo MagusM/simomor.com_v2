@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-import { addScaleCorrector } from "framer-motion";
 
 const config: Config = {
 	content: [

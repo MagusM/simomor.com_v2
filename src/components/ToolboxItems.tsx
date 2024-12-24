@@ -1,10 +1,9 @@
 import React from "react";
 import { TechIcon } from "@/components/TechIcon";
 import { twMerge } from "tailwind-merge";
+import { ToolboxItemProps } from "@/sections/sectionComponents/about/MyToolbox";
 
-export type ToolboxItemProps = { title: string; iconType: React.ElementType };
-
-type ToolboxItemsProps = {
+export type ToolboxItemsProps = {
 	items: ToolboxItemProps[];
 	className?: string;
 	itemWrapperClassName?: string;
