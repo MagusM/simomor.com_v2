@@ -1,6 +1,9 @@
+"use client";
+
 import { CardHeader } from "@/components/CardHeader";
 import { Card } from "@/components/Card";
-import React from "react";
+import React, { useRef } from "react";
+import { motion } from "framer-motion";
 
 type HobbiesProps = { title: string; emoji: string; left: string; top: string };
 
@@ -54,6 +57,8 @@ type BeyondTheCodeProps = { items: HobbiesProps[] };
 export const BeyondTheCode: React.FC<BeyondTheCodeProps> = ({
 	items
 }: BeyondTheCodeProps) => {
+	const constraintRef = useRef(null);
+
 	return (
 		<Card className="flex h-[320px] flex-col p-0 md:col-span-3 lg:col-span-2">
 			<CardHeader
@@ -63,19 +68,21 @@ export const BeyondTheCode: React.FC<BeyondTheCodeProps> = ({
 				}
 				className="px-6 py-6"
 			/>
-			<div className="relative flex-1">
+			<div className="relative flex-1" ref={constraintRef}>
 				{items.map((hobby) => (
-					<div
+					<motion.div
 						key={hobby.title}
 						className="absolute inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 px-6 py-1.5"
 						style={{
 							left: hobby.left,
 							top: hobby.top
 						}}
+						drag
+						dragConstraints={constraintRef}
 					>
 						<span className="font-medium text-gray-950">{hobby.title}</span>
 						<span>{hobby.emoji}</span>
-					</div>
+					</motion.div>
 				))}
 			</div>
 		</Card>
