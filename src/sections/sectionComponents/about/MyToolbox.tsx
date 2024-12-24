@@ -44,11 +44,15 @@ export const MyToolbox: React.FC<MyToolboxProps> = ({ items }) => {
 				}
 				className=""
 			/>
-			<ToolboxItems items={items} className="" />
+			<ToolboxItems
+				items={items}
+				className=""
+				itemWrapperClassName="animate-move-left [animation-duration:90s] hover:[animation-play-state:paused]"
+			/>
 			<ToolboxItems
 				items={items}
 				className="mt-6"
-				itemWrapperClassName="-translate-x-1/2"
+				itemWrapperClassName="animate-move-right [animation-duration:60s] hover:[animation-play-state:paused]"
 			/>
 		</Card>
 	);
