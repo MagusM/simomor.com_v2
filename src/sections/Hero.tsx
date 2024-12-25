@@ -142,7 +142,7 @@ export const HeroSection = () => {
 					</h1>
 					<p className="mt-4 text-center text-white/60 md:text-lg">
 						I specialize in transforming designs into functional,
-						high-performing web. Let's discuss your new project.
+						high-performing web. {"Let's"} discuss your new project.
 					</p>
 				</div>
 
@@ -165,7 +165,7 @@ export const HeroSection = () => {
 						}
 					>
 						<span className="group-hover:animate-wave">👋</span>
-						<span className="font-semibold">Let's Connect</span>
+						<span className="font-semibold">{"Let's"} Connect</span>
 					</button>
 				</div>
 			</div>
