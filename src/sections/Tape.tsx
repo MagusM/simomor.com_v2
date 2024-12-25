@@ -1,18 +1,6 @@
 import StarIcon from "@/assets/icons/star.svg";
 import { Fragment } from "react";
-
-const words = [
-	"Performant",
-	"Accessible",
-	"Secure",
-	"Interactive",
-	"Scalable",
-	"User Friendly",
-	"Maintainable",
-	"Responsive",
-	"Search Optimized",
-	"Reliable"
-];
+import { TapeWords } from "@/constants/TapeWords";
 
 export const TapeSection = () => {
 	return (
@@ -31,7 +19,7 @@ export const TapeSection = () => {
 						{[
 							...new Array(2).fill(0).map((_, idx) => (
 								<Fragment key={idx}>
-									{words.map((word, i) => (
+									{TapeWords.map((word, i) => (
 										<div
 											key={i + word}
 											className="inline-flex items-center gap-4"

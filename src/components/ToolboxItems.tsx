@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { TechIcon } from "@/components/TechIcon";
 import { twMerge } from "tailwind-merge";
-import { ToolboxItemProps } from "@/sections/sectionComponents/about/MyToolbox";
+import { ToolboxItemProps } from "@/constants/ToolboxItems";
 
 export type ToolboxItemsProps = {
 	items: ToolboxItemProps[];

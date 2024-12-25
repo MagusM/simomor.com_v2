@@ -21,5 +21,3 @@ export default function Home() {
 		</div>
 	);
 }
-
-// todo:continue: 5:09:08

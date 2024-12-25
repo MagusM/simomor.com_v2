@@ -3,62 +3,15 @@
 import dayjs from "dayjs";
 import Image, { StaticImageData } from "next/image";
 import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+import lightSaasLandingPage from "@/assets/images/higuy-landing-page.png";
+import aiStartupLandingPage from "@/assets/images/talia-landing-page.png";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
 import { isMobile } from "@/utils/deviceBreakpoints.util";
 import { useEffect, useState } from "react";
-
-type PortfolioProject = {
-	company: string;
-	year: string;
-	title: string;
-	results: { title: string }[];
-	link: string;
-	image: StaticImageData;
-};
-
-const portfolioProjects: PortfolioProject[] = [
-	{
-		company: "Simon Mor",
-		year: "2024",
-		title: "My Amazing Portfolio v1",
-		results: [
-			{ title: "Framer motion" },
-			{ title: "ThreeJS" },
-			{ title: "React, Tailwind" }
-		],
-		link: "https://simonmor.com",
-		image: darkSaasLandingPage //todo: Replace with appropriate type
-	},
-	{
-		company: "HyGuy",
-		year: dayjs().year().toString(),
-		title: "The Next Generation Customer Service",
-		results: [
-			{ title: "Instant Customer Support" },
-			{ title: "Smart Sales Assistance" },
-			{ title: "Proactive Service Enhancement" }
-		],
-		link: "https://higuy.ai",
-		image: lightSaasLandingPage //todo: Replace with appropriate type
-	},
-	{
-		company: "Talia Chriqui Consulting & Support",
-		year: dayjs().year().toString(),
-		title: "From cold leads to Hot deals",
-		results: [
-			{ title: "empower businesses to optimize their systems" },
-			{ title: "improve team efficiency" },
-			{ title: "achieve sustainable growth" }
-		],
-		link: "https://talia-chriqui.com",
-		image: aiStartupLandingPage //todo: Replace with appropriate type
-	}
-];
+import { PortfolioProjects } from "@/constants/Projects";
 
 export const ProjectsSection = () => {
 	const [topValue, setTopValue] = useState(0);
@@ -88,7 +41,7 @@ export const ProjectsSection = () => {
 					}
 				/>
 				<div className="mt-10 flex flex-col gap-20 md:mt-20">
-					{portfolioProjects.map((project, index) => (
+					{PortfolioProjects.map((project, index) => (
 						<Card
 							key={project.title}
 							className="sticky px-8 pb-0 pt-8 md:px-10 md:pt-12 lg:px-20 lg:pt-16"

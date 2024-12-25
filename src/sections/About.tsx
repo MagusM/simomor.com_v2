@@ -1,15 +1,11 @@
 import { SectionHeader } from "@/components/SectionHeader";
 import React from "react";
 import { MyReads } from "@/sections/sectionComponents/about/MyReads";
-import {
-	MyToolbox,
-	ToolBoxItems
-} from "@/sections/sectionComponents/about/MyToolbox";
-import {
-	BeyondTheCode,
-	Hobbies
-} from "@/sections/sectionComponents/about/BeyondTheCode";
+import { MyToolbox } from "@/sections/sectionComponents/about/MyToolbox";
+import { BeyondTheCode } from "@/sections/sectionComponents/about/BeyondTheCode";
 import { MapImage } from "@/sections/sectionComponents/about/MapImage";
+import { ToolBoxItems } from "@/constants/ToolboxItems";
+import { Hobbies } from "@/components/Hobbies";
 
 export const AboutSection = () => {
 	return (

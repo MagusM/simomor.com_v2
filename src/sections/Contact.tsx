@@ -1,3 +1,5 @@
+"use client";
+
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import grainImage from "@/assets/images/grain.jpg";
 
@@ -23,7 +25,13 @@ export const ContactSection = () => {
 							</p>
 						</div>
 						<div className="">
-							<button className="inline-flex h-12 w-max items-center gap-2 rounded-xl border border-gray-950 bg-gray-900 px-6 text-white">
+							<button
+								//border-white bg-gray-800 px-6 text-white
+								className="inline-flex h-12 w-max items-center gap-2 rounded-xl border border-gray-950 bg-gray-900 px-6 text-white transition duration-500 hover:border-white hover:bg-gray-800 hover:text-white"
+								onClick={() =>
+									(window.location.href = `mailto:${process.env.NEXT_PUBLIC_PERSONAL_EMAIL}`)
+								}
+							>
 								<span className="font-semibold">Contact Me</span>
 								<ArrowUpRightIcon className="size-4" />
 							</button>

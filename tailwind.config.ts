@@ -34,7 +34,8 @@ const config: Config = {
 			animation: {
 				"ping-large": "ping-large 1s ease-in-out infinite",
 				"move-left": "move-left 1s linear infinite",
-				"move-right": "move-right 1s linear infinite"
+				"move-right": "move-right 1s linear infinite",
+				wave: "wave 1s infinite ease-in-out"
 			},
 			keyframes: {
 				"ping-large": {
@@ -58,6 +59,10 @@ const config: Config = {
 					"100%": {
 						transform: "translateX(0%)"
 					}
+				},
+				wave: {
+					"0%, 100%": { transform: "rotate(0deg)" }, // Start and end position
+					"50%": { transform: "rotate(40deg)" } // Middle position (wave)
 				}
 			}
 		}
