@@ -1,7 +1,13 @@
 import { capitalize } from "lodash";
 import clsx from "clsx";
 
-const routesSet = new Set<string>(["home", "projects", "about", "contact"]);
+export type HeaderTypes = "home" | "projects" | "about" | "contact";
+export const routesSet = new Set<HeaderTypes>([
+	"home",
+	"projects",
+	"about",
+	"contact"
+]);
 
 export const Header = () => {
 	return (

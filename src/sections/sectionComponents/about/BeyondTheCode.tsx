@@ -72,7 +72,7 @@ export const BeyondTheCode: React.FC<BeyondTheCodeProps> = ({
 				{items.map((hobby) => (
 					<motion.div
 						key={hobby.title}
-						className="absolute inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 px-6 py-1.5"
+						className="absolute inline-flex cursor-pointer items-center gap-2 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 px-6 py-1.5"
 						style={{
 							left: hobby.left,
 							top: hobby.top

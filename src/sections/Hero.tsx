@@ -1,3 +1,5 @@
+"use client";
+
 import memojiImage from "@/assets/images/memoji-computer.png";
 import Image from "next/image";
 import ArrowDown from "@/assets/icons/arrow-down.svg";
@@ -5,6 +7,8 @@ import grainImage from "@/assets/images/grain.jpg";
 import StarIcon from "@/assets/icons/star.svg";
 import { HeroOrbit, HeroOrbitProps } from "@/components/HeroOrbit";
 import SparkleIcon from "@/assets/icons/sparkle.svg";
+import { useCallback } from "react";
+import { HeaderTypes, routesSet } from "@/sections/Header";
 
 type HeroOrbitMapProps = {
 	child: React.ReactNode;
@@ -238,11 +242,18 @@ export const HeroSection = () => {
 				</div>
 
 				<div className="mt-8 flex flex-col items-center justify-center gap-4 md:flex-row">
-					<button className="inline-flex h-12 items-center gap-2 rounded-xl border border-white/15 px-6">
+					<button
+						onClick={() =>
+							document
+								.getElementById("projects")
+								?.scrollIntoView({ behavior: "smooth" })
+						}
+						className="z-10 inline-flex h-12 !cursor-pointer items-center gap-2 rounded-xl border border-white bg-gray-800 px-6 text-white"
+					>
 						<span className="font-semibold">Explore My Work</span>
 						<ArrowDown className="size-4" />
 					</button>
-					<button className="g inline-flex h-12 items-center gap-2 rounded-xl border border-white bg-white px-6 text-gray-900">
+					<button className="z-10 inline-flex h-12 !cursor-pointer items-center gap-2 rounded-xl border border-white bg-white px-6 text-gray-900">
 						<span>👋</span>
 						<span className="font-semibold">Let's Connect</span>
 					</button>
