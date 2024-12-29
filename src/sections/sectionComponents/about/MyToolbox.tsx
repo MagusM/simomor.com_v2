@@ -25,6 +25,8 @@ export const MyToolbox: React.FC<MyToolboxProps> = ({ items }) => {
 				items={items}
 				className="mt-6 cursor-pointer"
 				itemWrapperClassName="animate-move-right [animation-duration:60s] hover:[animation-play-state:paused]"
+				animationDirection="right"
+				// animationDuration={40}
 			/>
 		</Card>
 	);
