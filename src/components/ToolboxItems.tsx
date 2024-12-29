@@ -1,3 +1,5 @@
+"use client";
+
 import React, { Fragment } from "react";
 import { TechIcon } from "@/components/TechIcon";
 import { twMerge } from "tailwind-merge";
@@ -36,7 +38,7 @@ export const ToolboxItems: React.FC<ToolboxItemsProps> = ({
 							{items.map((item) => (
 								<div
 									key={item.title}
-									className="inline-flex items-center gap-4 rounded-lg px-3 py-2 outline outline-2 outline-white/10"
+									className="inline-flex items-center gap-4 rounded-lg px-3 py-2 outline outline-2 outline-white/10 hover:outline-cyan-300"
 								>
 									<TechIcon component={item.iconType} />
 									<span className="font-semibold">{item.title}</span>
