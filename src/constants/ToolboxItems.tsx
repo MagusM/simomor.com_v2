@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import JavascriptIcon from "@/assets/icons/javascript.svg";
 import ReactIcon from "@/assets/icons/react.svg";
@@ -50,7 +52,6 @@ export const ToolBoxItems: ToolboxItemProps[] = [
 	{ title: "NestJS", iconType: NestJsIcon },
 	{ title: "Mongo", iconType: MongoIcon },
 	{ title: "NextJS", iconType: NextjsIcon },
-	{ title: "Node", iconType: NodeJSIcon },
 	{ title: "Notion", iconType: NotionIcon },
 	{ title: "Zod", iconType: ZodIcon },
 	{ title: "Webpack", iconType: WebpackIcon },
@@ -68,7 +69,7 @@ export const ToolBoxItems: ToolboxItemProps[] = [
 	{ title: "TypeScript", iconType: TypescriptIcon },
 	{ title: "React", iconType: ReactIcon },
 	{ title: "Framer Motion", iconType: FramerIcon },
-	{ title: "NodeJS", iconType: ReactIcon },
+	{ title: "NodeJS", iconType: NodeJSIcon },
 	{ title: "HTML5", iconType: HTMLIcon },
 	{ title: "CSS3", iconType: CssIcon },
 	{ title: "GitHub", iconType: GithubIcon }
