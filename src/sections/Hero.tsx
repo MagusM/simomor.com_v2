@@ -11,8 +11,6 @@ import {
 	HeroOrbitStarMap,
 	RingsWidth
 } from "@/constants/HeroOrbitMaps";
-import { useMemo, useState } from "react";
-import { twMerge } from "tailwind-merge";
 
 export const HeroSection = () => {
 	return (
@@ -146,7 +144,7 @@ export const HeroSection = () => {
 					</p>
 				</div>
 
-				<div className="mt-8 flex flex-col items-center justify-center gap-4 md:flex-row">
+				<div className="mt-8 flex flex-col items-center justify-center gap-6 md:flex-row">
 					<button
 						onClick={() =>
 							document

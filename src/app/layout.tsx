@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Calistoga } from "next/font/google";
 import "./globals.css";
 import { twMerge } from "tailwind-merge";
+import { MetaData } from "@/constants/MetaData";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const calistoga = Calistoga({
@@ -10,10 +11,7 @@ const calistoga = Calistoga({
 	weight: ["400"]
 });
 
-export const metadata: Metadata = {
-	title: "My Portfolio",
-	description: "Created with the help of Frontend Tribe"
-};
+export const metadata: Metadata = MetaData;
 
 export default function RootLayout({
 	children

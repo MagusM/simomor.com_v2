@@ -6,6 +6,7 @@ import { Card } from "@/components/Card";
 import { Fragment, useEffect, useState, useRef, useCallback } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { Testimonials } from "@/constants/Testemonials";
+import { throttle } from "lodash";
 
 export const TestimonialsSection = () => {
 	const controls = useAnimation();
@@ -34,6 +35,9 @@ export const TestimonialsSection = () => {
 		startAnimation();
 	}, [isDragging, startAnimation]);
 
+	const handleDragStart = throttle(() => setIsDragging(true), 100);
+	const handleDragStop = throttle(() => setIsDragging(false), 100);
+
 	return (
 		<div className="py-16 lg:py-24">
 			<div className="container">
@@ -57,12 +61,19 @@ export const TestimonialsSection = () => {
 						ref={motionRef}
 						className="flex flex-none cursor-grab gap-8 pr-8"
 						drag="x"
+						dragConstraints={
+							motionRef.current
+								? {
+										left: -motionRef.current.scrollWidth + window.innerWidth,
+										right: 0
+									}
+								: { left: 0, right: 0 }
+						}
+						animate={controls}
+						onDragStart={handleDragStart}
+						onDragEnd={handleDragStop}
 						onHoverStart={stopAnimation}
 						onHoverEnd={startAnimation}
-						dragConstraints={{ left: -1000, right: 0 }}
-						animate={controls}
-						onDragStart={() => setIsDragging(true)}
-						onDragEnd={() => setIsDragging(false)}
 					>
 						{[...Array(2)].map((_, outerIndex) => (
 							<Fragment key={outerIndex}>
