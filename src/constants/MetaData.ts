@@ -20,7 +20,7 @@ export const MetaData: MetadataType = {
 		siteName: "SM Portfolio",
 		images: [
 			{
-				url: `https://simonmor.com/favicon.svg`,
+				url: `https://simonmor.com/favicon.ico`,
 				width: 1200,
 				height: 630,
 				alt: "My Portfolio OG Image"
